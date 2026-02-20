@@ -1,0 +1,427 @@
+{
+  "project_type": "backend",
+  "version": "1.0",
+  "created_at": "2025-02-20T00:00:00Z",
+  "total_tasks": 32,
+  "total_layers": 8,
+  "max_parallel": 7,
+  "layers": {
+    "0": {
+      "layer_num": 0,
+      "depends_on": [],
+      "tasks": [
+        {
+          "id": "0.1",
+          "file": "backend-dev-plan-0.1-init-nodejs-typescript.md",
+          "name": "初始化 Node.js + TypeScript 项目",
+          "description": "创建项目结构，配置 TypeScript 编译环境",
+          "dependencies": [],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "0.2",
+          "file": "backend-dev-plan-0.2-setup-eslint-prettier.md",
+          "name": "配置 ESLint + Prettier",
+          "description": "配置代码质量检查和格式化工具",
+          "dependencies": [],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "0.3",
+          "file": "backend-dev-plan-0.3-setup-git-hooks.md",
+          "name": "配置 Husky + lint-staged",
+          "description": "配置 Git hooks 自动代码检查",
+          "dependencies": [],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    },
+    "1": {
+      "layer_num": 1,
+      "depends_on": [0],
+      "tasks": [
+        {
+          "id": "1.1",
+          "file": "backend-dev-plan-1.1-install-core-dependencies.md",
+          "name": "安装核心依赖包",
+          "description": "安装 Express、WebSocket、数据库等核心依赖",
+          "dependencies": ["0.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "1.2",
+          "file": "backend-dev-plan-1.2-config-env-variables.md",
+          "name": "配置环境变量管理",
+          "description": "创建 .env 配置和类型安全的环境变量管理",
+          "dependencies": ["0.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "1.3",
+          "file": "backend-dev-plan-1.3-setup-winston-logging.md",
+          "name": "配置 Winston 日志系统",
+          "description": "配置多级别日志、日志文件和日志轮转",
+          "dependencies": ["0.1", "1.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "1.4",
+          "file": "backend-dev-plan-1.4-config-database.md",
+          "name": "配置 PostgreSQL 数据库连接",
+          "description": "配置 Sequelize ORM，支持 SQLite 和 PostgreSQL",
+          "dependencies": ["0.1", "1.1", "1.2"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "1.5",
+          "file": "backend-dev-plan-1.5-config-redis.md",
+          "name": "配置 Redis 连接",
+          "description": "配置 Redis 客户端和缓存服务",
+          "dependencies": ["0.1", "1.1", "1.2"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    },
+    "2": {
+      "layer_num": 2,
+      "depends_on": [1],
+      "tasks": [
+        {
+          "id": "2.1",
+          "file": "backend-dev-plan-2.1-define-sequelize-models.md",
+          "name": "定义 Sequelize 数据模型",
+          "description": "定义所有数据库模型和关联关系",
+          "dependencies": ["1.4"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "2.2",
+          "file": "backend-dev-plan-2.2-create-db-migrations.md",
+          "name": "创建数据库迁移脚本",
+          "description": "创建表结构和索引的同步脚本",
+          "dependencies": ["2.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "2.3",
+          "file": "backend-dev-plan-2.3-define-typescript-types.md",
+          "name": "定义全局 TypeScript 类型",
+          "description": "定义业务类型、API类型、WebSocket消息类型等",
+          "dependencies": ["0.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "2.4",
+          "file": "backend-dev-plan-2.4-setup-express-server.md",
+          "name": "实现 Express 服务器基础架构",
+          "description": "创建 Express app，配置中间件和基础路由",
+          "dependencies": ["1.1", "1.2"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "2.5",
+          "file": "backend-dev-plan-2.5-setup-websocket-server.md",
+          "name": "实现 WebSocket 服务器基础",
+          "description": "创建 WebSocket 服务器，实现连接管理和心跳",
+          "dependencies": ["1.1", "2.4"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "2.6",
+          "file": "backend-dev-plan-2.6-implement-fs-monitor.md",
+          "name": "实现文件系统监控服务",
+          "description": "使用 chokidar 监控文件变更",
+          "dependencies": ["1.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "2.7",
+          "file": "backend-dev-plan-2.7-config-bull-queue.md",
+          "name": "配置 Bull 任务队列",
+          "description": "配置基于 Redis 的任务队列和并发控制",
+          "dependencies": ["1.1", "1.5"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    },
+    "3": {
+      "layer_num": 3,
+      "depends_on": [2],
+      "tasks": [
+        {
+          "id": "3.1",
+          "file": "backend-dev-plan-3.1-implement-claude-executor.md",
+          "name": "实现 Claude Code Executor",
+          "description": "实现进程管理、输出捕获、超时和重试",
+          "dependencies": ["2.3", "1.3"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "3.2",
+          "file": "backend-dev-plan-3.2-implement-dag-parser.md",
+          "name": "实现 DAG Parser",
+          "description": "解析 tasks-index.json，验证 DAG 结构和循环依赖",
+          "dependencies": ["2.3"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "3.3",
+          "file": "backend-dev-plan-3.3-implement-layer-executor.md",
+          "name": "实现 Layer Executor",
+          "description": "实现层级执行逻辑和层内并行执行",
+          "dependencies": ["3.1", "3.2", "2.7"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "3.4",
+          "file": "backend-dev-plan-3.4-implement-dag-engine.md",
+          "name": "实现 DAG Execution Engine",
+          "description": "实现完整的逐层执行引擎和失败处理",
+          "dependencies": ["3.2", "3.3"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    },
+    "4": {
+      "layer_num": 4,
+      "depends_on": [3],
+      "tasks": [
+        {
+          "id": "4.1",
+          "file": "backend-dev-plan-4.1-implement-workflow-orchestrator.md",
+          "name": "实现 Workflow Orchestrator",
+          "description": "实现7种工作模式的管理和切换",
+          "dependencies": ["2.3", "3.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "4.2",
+          "file": "backend-dev-plan-4.2-implement-websocket-manager.md",
+          "name": "实现 WebSocket Manager",
+          "description": "实现连接池、消息路由和房间管理",
+          "dependencies": ["2.5", "2.3"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "4.3",
+          "file": "backend-dev-plan-4.3-implement-mode-handlers.md",
+          "name": "实现 Mode Handlers",
+          "description": "为7个模式实现专门的处理器",
+          "dependencies": ["4.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "4.4",
+          "file": "backend-dev-plan-4.4-implement-progress-tracker.md",
+          "name": "实现 Progress Tracker",
+          "description": "实现任务进度追踪和实时指标收集",
+          "dependencies": ["2.1", "4.2"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "4.5",
+          "file": "backend-dev-plan-4.5-implement-file-service.md",
+          "name": "实现 File Service",
+          "description": "实现文件 CRUD 和文件树构建",
+          "dependencies": ["2.6"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    },
+    "5": {
+      "layer_num": 5,
+      "depends_on": [4],
+      "tasks": [
+        {
+          "id": "5.1",
+          "file": "backend-dev-plan-5.1-implement-rest-api.md",
+          "name": "实现 REST API 路由",
+          "description": "实现项目、任务、文件、工作流的API接口",
+          "dependencies": ["2.4", "4.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "5.2",
+          "file": "backend-dev-plan-5.2-implement-websocket-events.md",
+          "name": "实现 WebSocket 事件处理",
+          "description": "实现 WebSocket 消息路由和命令分发",
+          "dependencies": ["4.2"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "5.3",
+          "file": "backend-dev-plan-5.3-implement-auth-middleware.md",
+          "name": "实现认证中间件",
+          "description": "实现 JWT 认证和路由保护",
+          "dependencies": ["2.4"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "5.4",
+          "file": "backend-dev-plan-5.4-implement-error-handler.md",
+          "name": "实现错误处理中间件",
+          "description": "实现统一错误处理和日志记录",
+          "dependencies": ["2.4"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    },
+    "6": {
+      "layer_num": 6,
+      "depends_on": [5],
+      "tasks": [
+        {
+          "id": "6.1",
+          "file": "backend-dev-plan-6.1-integrate-all-services.md",
+          "name": "整合所有服务到主应用",
+          "description": "整合所有模块，实现优雅启动和关闭",
+          "dependencies": ["5.1", "5.2", "5.3", "5.4"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "6.2",
+          "file": "backend-dev-plan-6.2-write-documentation.md",
+          "name": "编写项目文档",
+          "description": "编写 README、API文档、部署文档",
+          "dependencies": ["6.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    },
+    "7": {
+      "layer_num": 7,
+      "depends_on": [6],
+      "tasks": [
+        {
+          "id": "7.1",
+          "file": "backend-dev-plan-7.1-write-tests.md",
+          "name": "编写单元测试和集成测试",
+          "description": "配置测试框架，编写单元和集成测试",
+          "dependencies": ["6.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        },
+        {
+          "id": "7.2",
+          "file": "backend-dev-plan-7.2-docker-deployment.md",
+          "name": "配置 Docker 和生产部署",
+          "description": "创建 Dockerfile、docker-compose、PM2配置",
+          "dependencies": ["7.1"],
+          "status": "pending",
+          "started_at": null,
+          "completed_at": null,
+          "error": null
+        }
+      ],
+      "parallel": true,
+      "status": "pending"
+    }
+  },
+  "dag_mermaid": "graph TD\n    0.1[0.1 初始化项目] --> 1.1[1.1 安装依赖]\n    0.1 --> 1.2[1.2 环境变量]\n    0.1 --> 1.3[1.3 日志]\n    1.1 --> 1.3\n    1.1 --> 1.4[1.4 数据库]\n    1.1 --> 1.5[1.5 Redis]\n    1.2 --> 1.4\n    1.2 --> 1.5\n    1.4 --> 2.1[2.1 数据模型]\n    2.1 --> 2.2[2.2 迁移]\n    0.1 --> 2.3[2.3 类型定义]\n    1.1 --> 2.4[2.4 Express]\n    1.2 --> 2.4\n    2.4 --> 2.5[2.5 WebSocket]\n    1.1 --> 2.6[2.6 文件监控]\n    1.1 --> 2.7[2.7 任务队列]\n    1.5 --> 2.7\n    2.3 --> 3.1[3.1 Claude Executor]\n    1.3 --> 3.1\n    2.3 --> 3.2[3.2 DAG Parser]\n    3.1 --> 3.3[3.3 Layer Executor]\n    3.2 --> 3.3\n    2.7 --> 3.3\n    3.2 --> 3.4[3.4 DAG Engine]\n    3.3 --> 3.4\n    2.3 --> 4.1[4.1 Workflow]\n    3.1 --> 4.1\n    2.5 --> 4.2[4.2 WS Manager]\n    2.3 --> 4.2\n    4.1 --> 4.3[4.3 Mode Handlers]\n    2.1 --> 4.4[4.4 Progress]\n    4.2 --> 4.4\n    2.6 --> 4.5[4.5 File Service]\n    2.4 --> 5.1[5.1 REST API]\n    4.1 --> 5.1\n    4.2 --> 5.2[5.2 WS Events]\n    2.4 --> 5.3[5.3 Auth]\n    2.4 --> 5.4[5.4 Error Handler]\n    5.1 --> 6.1[6.1 整合]\n    5.2 --> 6.1\n    5.3 --> 6.1\n    5.4 --> 6.1\n    6.1 --> 6.2[6.2 文档]\n    6.1 --> 7.1[7.1 测试]\n    7.1 --> 7.2[7.2 Docker]"
+}

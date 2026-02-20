@@ -1,0 +1,306 @@
+{
+  "project_type": "frontend",
+  "version": "1.0",
+  "total_tasks": 30,
+  "total_layers": 8,
+  "max_parallel": 6,
+  "layers": {
+    "1": {
+      "layer_num": 1,
+      "depends_on": [],
+      "parallel": true,
+      "tasks": [
+        {
+          "id": "1.1",
+          "file": "frontend-dev-plan-1.1-init-vite-react-typescript.md",
+          "name": "初始化 Vite + React + TypeScript 项目",
+          "description": "创建React项目基础结构",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "1.2",
+          "file": "frontend-dev-plan-1.2-setup-eslint-prettier.md",
+          "name": "配置 ESLint + Prettier",
+          "description": "代码规范工具配置",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "1.3",
+          "file": "frontend-dev-plan-1.3-setup-git-hooks.md",
+          "name": "配置 Husky + lint-staged",
+          "description": "Git钩子配置",
+          "dependencies": [],
+          "status": "pending"
+        }
+      ]
+    },
+    "2": {
+      "layer_num": 2,
+      "depends_on": [1],
+      "parallel": true,
+      "tasks": [
+        {
+          "id": "2.1",
+          "file": "frontend-dev-plan-2.1-setup-tailwindcss.md",
+          "name": "配置 TailwindCSS",
+          "description": "原子化CSS框架配置",
+          "dependencies": ["1.1"],
+          "status": "pending"
+        },
+        {
+          "id": "2.2",
+          "file": "frontend-dev-plan-2.2-install-antd.md",
+          "name": "安装配置 Ant Design",
+          "description": "UI组件库配置",
+          "dependencies": ["1.1"],
+          "status": "pending"
+        },
+        {
+          "id": "2.3",
+          "file": "frontend-dev-plan-2.3-setup-react-router.md",
+          "name": "配置 React Router",
+          "description": "路由配置和懒加载",
+          "dependencies": ["1.1"],
+          "status": "pending"
+        },
+        {
+          "id": "2.4",
+          "file": "frontend-dev-plan-2.4-setup-zustand.md",
+          "name": "配置 Zustand",
+          "description": "状态管理配置",
+          "dependencies": ["1.1"],
+          "status": "pending"
+        },
+        {
+          "id": "2.5",
+          "file": "frontend-dev-plan-2.5-setup-react-query.md",
+          "name": "配置 React Query",
+          "description": "服务端状态管理",
+          "dependencies": ["1.1"],
+          "status": "pending"
+        },
+        {
+          "id": "2.6",
+          "file": "frontend-dev-plan-2.6-create-directory-structure.md",
+          "name": "创建项目目录结构",
+          "description": "标准化目录和路径别名",
+          "dependencies": ["1.1"],
+          "status": "pending"
+        }
+      ]
+    },
+    "3": {
+      "layer_num": 3,
+      "depends_on": [2],
+      "parallel": true,
+      "tasks": [
+        {
+          "id": "3.1",
+          "file": "frontend-dev-plan-3.1-implement-axios-client.md",
+          "name": "实现 Axios HTTP 客户端",
+          "description": "HTTP请求封装",
+          "dependencies": ["2.6"],
+          "status": "pending"
+        },
+        {
+          "id": "3.2",
+          "file": "frontend-dev-plan-3.2-implement-socketio-client.md",
+          "name": "实现 Socket.IO WebSocket 客户端",
+          "description": "实时通信客户端",
+          "dependencies": ["2.6"],
+          "status": "pending"
+        },
+        {
+          "id": "3.3",
+          "file": "frontend-dev-plan-3.3-implement-main-layout.md",
+          "name": "实现 MainLayout 布局组件",
+          "description": "三栏布局实现",
+          "dependencies": ["2.2", "2.1", "2.3"],
+          "status": "pending"
+        },
+        {
+          "id": "3.4",
+          "file": "frontend-dev-plan-3.4-define-typescript-types.md",
+          "name": "定义全局 TypeScript 类型",
+          "description": "业务类型定义",
+          "dependencies": ["2.6"],
+          "status": "pending"
+        },
+        {
+          "id": "3.5",
+          "file": "frontend-dev-plan-3.5-implement-utils.md",
+          "name": "实现通用工具函数",
+          "description": "工具函数库",
+          "dependencies": ["2.6"],
+          "status": "pending"
+        },
+        {
+          "id": "3.6",
+          "file": "frontend-dev-plan-3.6-implement-route-guard.md",
+          "name": "实现路由配置和守卫",
+          "description": "路由鉴权和守卫",
+          "dependencies": ["2.3", "2.4"],
+          "status": "pending"
+        }
+      ]
+    },
+    "4": {
+      "layer_num": 4,
+      "depends_on": [3],
+      "parallel": true,
+      "tasks": [
+        {
+          "id": "4.1",
+          "file": "frontend-dev-plan-4.1-implement-file-explorer.md",
+          "name": "实现文件浏览器模块",
+          "description": "文件树组件",
+          "dependencies": ["3.3", "3.1", "3.4"],
+          "status": "pending"
+        },
+        {
+          "id": "4.2",
+          "file": "frontend-dev-plan-4.2-implement-output-console.md",
+          "name": "实现输出控制台模块",
+          "description": "实时输出组件",
+          "dependencies": ["3.3", "3.2", "3.4"],
+          "status": "pending"
+        },
+        {
+          "id": "4.3",
+          "file": "frontend-dev-plan-4.3-implement-mode-control.md",
+          "name": "实现模式控制模块",
+          "description": "模式切换组件",
+          "dependencies": ["3.3", "3.4"],
+          "status": "pending"
+        },
+        {
+          "id": "4.4",
+          "file": "frontend-dev-plan-4.4-implement-task-execution-basic.md",
+          "name": "实现任务执行模块基础",
+          "description": "任务仪表板",
+          "dependencies": ["3.3", "3.2", "3.4"],
+          "status": "pending"
+        }
+      ]
+    },
+    "5": {
+      "layer_num": 5,
+      "depends_on": [4],
+      "parallel": true,
+      "tasks": [
+        {
+          "id": "5.1",
+          "file": "frontend-dev-plan-5.1-integrate-monaco-editor.md",
+          "name": "集成 Monaco Editor",
+          "description": "代码编辑器集成",
+          "dependencies": ["4.1"],
+          "status": "pending"
+        },
+        {
+          "id": "5.2",
+          "file": "frontend-dev-plan-5.2-implement-dag-visualization.md",
+          "name": "实现 Mermaid DAG 可视化",
+          "description": "依赖图可视化",
+          "dependencies": ["4.4"],
+          "status": "pending"
+        },
+        {
+          "id": "5.3",
+          "file": "frontend-dev-plan-5.3-implement-realtime-progress.md",
+          "name": "实现任务实时进度监控",
+          "description": "进度追踪组件",
+          "dependencies": ["4.4", "3.2"],
+          "status": "pending"
+        },
+        {
+          "id": "5.4",
+          "file": "frontend-dev-plan-5.4-implement-file-crud.md",
+          "name": "实现文件操作功能",
+          "description": "文件CRUD操作",
+          "dependencies": ["4.1", "3.1"],
+          "status": "pending"
+        },
+        {
+          "id": "5.5",
+          "file": "frontend-dev-plan-5.5-implement-input-history.md",
+          "name": "实现输入历史和快捷键",
+          "description": "输入增强功能",
+          "dependencies": ["4.2"],
+          "status": "pending"
+        }
+      ]
+    },
+    "6": {
+      "layer_num": 6,
+      "depends_on": [5],
+      "parallel": true,
+      "tasks": [
+        {
+          "id": "6.1",
+          "file": "frontend-dev-plan-6.1-implement-dashboard.md",
+          "name": "实现 Dashboard 主页面",
+          "description": "项目列表页面",
+          "dependencies": ["5.1", "5.2", "5.3", "5.4", "5.5"],
+          "status": "pending"
+        },
+        {
+          "id": "6.2",
+          "file": "frontend-dev-plan-6.2-implement-project-view.md",
+          "name": "实现 ProjectView 项目视图",
+          "description": "项目详情页面",
+          "dependencies": ["5.1", "5.2", "5.3", "5.4", "5.5"],
+          "status": "pending"
+        }
+      ]
+    },
+    "7": {
+      "layer_num": 7,
+      "depends_on": [6],
+      "parallel": true,
+      "tasks": [
+        {
+          "id": "7.1",
+          "file": "frontend-dev-plan-7.1-write-tests.md",
+          "name": "编写核心模块单元测试",
+          "description": "单元和E2E测试",
+          "dependencies": ["6.1", "6.2"],
+          "status": "pending"
+        },
+        {
+          "id": "7.2",
+          "file": "frontend-dev-plan-7.2-write-e2e-tests.md",
+          "name": "编写 E2E 测试用例",
+          "description": "端到端测试",
+          "dependencies": ["6.1", "6.2"],
+          "status": "pending"
+        }
+      ]
+    },
+    "8": {
+      "layer_num": 8,
+      "depends_on": [7],
+      "parallel": false,
+      "tasks": [
+        {
+          "id": "8.1",
+          "file": "frontend-dev-plan-8.1-performance-optimization.md",
+          "name": "性能优化",
+          "description": "代码分割和懒加载",
+          "dependencies": ["7.1", "7.2"],
+          "status": "pending"
+        },
+        {
+          "id": "8.2",
+          "file": "frontend-dev-plan-8.2-build-deployment.md",
+          "name": "生产构建配置和部署",
+          "description": "构建优化和部署配置",
+          "dependencies": ["8.1"],
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "dag_mermaid": "graph TD\n  1.1-->2.1\n  1.1-->2.2\n  1.1-->2.3\n  1.1-->2.4\n  1.1-->2.5\n  1.1-->2.6\n  2.6-->3.1\n  2.6-->3.2\n  2.2-->3.3\n  2.1-->3.3\n  2.3-->3.3\n  2.6-->3.4\n  2.6-->3.5\n  2.3-->3.6\n  2.4-->3.6\n  3.3-->4.1\n  3.1-->4.1\n  3.4-->4.1\n  3.3-->4.2\n  3.2-->4.2\n  3.4-->4.2\n  3.3-->4.3\n  3.4-->4.3\n  3.3-->4.4\n  3.2-->4.4\n  3.4-->4.4\n  4.1-->5.1\n  4.4-->5.2\n  4.4-->5.3\n  3.2-->5.3\n  4.1-->5.4\n  3.1-->5.4\n  4.2-->5.5\n  5.1-->6.1\n  5.2-->6.1\n  5.3-->6.1\n  5.4-->6.1\n  5.5-->6.1\n  5.1-->6.2\n  5.2-->6.2\n  5.3-->6.2\n  5.4-->6.2\n  5.5-->6.2\n  6.1-->7.1\n  6.2-->7.1\n  6.1-->7.2\n  6.2-->7.2\n  7.1-->8.1\n  7.2-->8.1\n  8.1-->8.2"
+}
