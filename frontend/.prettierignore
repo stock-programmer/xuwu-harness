@@ -1,0 +1,7 @@
+dist
+node_modules
+.cache
+build
+public/build
+coverage
+*.md

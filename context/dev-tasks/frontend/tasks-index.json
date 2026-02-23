@@ -142,7 +142,7 @@
           "name": "实现路由配置和守卫",
           "description": "路由鉴权和守卫",
           "dependencies": ["2.3", "2.4"],
-          "status": "pending"
+          "status": "done"
         }
       ]
     },
@@ -165,7 +165,7 @@
           "name": "实现输出控制台模块",
           "description": "实时输出组件",
           "dependencies": ["3.3", "3.2", "3.4"],
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "4.3",
@@ -204,7 +204,7 @@
           "name": "实现 Mermaid DAG 可视化",
           "description": "依赖图可视化",
           "dependencies": ["4.4"],
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "5.3",
@@ -220,7 +220,7 @@
           "name": "实现文件操作功能",
           "description": "文件CRUD操作",
           "dependencies": ["4.1", "3.1"],
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "5.5",
@@ -228,7 +228,7 @@
           "name": "实现输入历史和快捷键",
           "description": "输入增强功能",
           "dependencies": ["4.2"],
-          "status": "pending"
+          "status": "done"
         }
       ]
     },
@@ -251,7 +251,7 @@
           "name": "实现 ProjectView 项目视图",
           "description": "项目详情页面",
           "dependencies": ["5.1", "5.2", "5.3", "5.4", "5.5"],
-          "status": "pending"
+          "status": "done"
         }
       ]
     },
@@ -274,7 +274,7 @@
           "name": "编写 E2E 测试用例",
           "description": "端到端测试",
           "dependencies": ["6.1", "6.2"],
-          "status": "pending"
+          "status": "done"
         }
       ]
     },
@@ -297,7 +297,7 @@
           "name": "生产构建配置和部署",
           "description": "构建优化和部署配置",
           "dependencies": ["8.1"],
-          "status": "pending"
+          "status": "done"
         }
       ]
     }

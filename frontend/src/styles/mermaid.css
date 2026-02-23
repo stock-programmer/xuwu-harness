@@ -1,0 +1,30 @@
+.mermaid-container {
+  background: #f5f5f5;
+}
+
+.mermaid-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.mermaid-container .node rect,
+.mermaid-container .node circle,
+.mermaid-container .node polygon {
+  transition: all 0.3s ease;
+}
+
+.mermaid-container .node:hover rect,
+.mermaid-container .node:hover circle,
+.mermaid-container .node:hover polygon {
+  filter: brightness(0.9);
+  stroke-width: 2px;
+}
+
+/* Fullscreen styles */
+.mermaid-container:fullscreen {
+  background: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

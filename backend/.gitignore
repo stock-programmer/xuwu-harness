@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*
+.env.*.local
+!.env.example
+logs/
+*.log
+.DS_Store
+
+# SQLite database files
+database.sqlite
+database.sqlite-journal
